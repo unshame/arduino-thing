@@ -19,7 +19,7 @@ void setup();
 /* INIT */
 void initOutput();
 void initRandom();
-void initScreen();
+void initDisplay();
 
 /* LOOP */
 void loop();
@@ -46,8 +46,8 @@ float getAirTemperature();
 bool isAllParamsOk();
 bool isParamOk(Param *param);
 
-/* SCREEN */
-void resetScreen();
+/* DISPLAY */
+void resetDisplay();
 void displayAllValues();
 void displayWarning(String warning);
 void displayLineEnd();
