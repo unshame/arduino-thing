@@ -13,33 +13,33 @@
 LiquidCrystal lcd(PIN_LCD_1, PIN_LCD_2, PIN_LCD_3, PIN_LCD_4, PIN_LCD_5, PIN_LCD_6);
 DHT dht(PIN_D_DHT, DHT_TYPE);
 
-Param soilHumidity{
+Param soilHumidity {
   "Soil Humidity", "SH",
-  220, 600,
-  "WATER THE PLANTS", "TOO WET",
+  SH_MIN, SH_MAX,
+  "WATER THE PLANTS", "TOO MUCH WATER",
   true, 0,
   getSoilHumidity
 };
 
-Param ambientBrightness{
+Param ambientBrightness {
   "Ambient Brightness", "AB",
-  -1, 100,
+  -1, AB_MAX,
   "", "LIGHT TOO BRIGHT",
   false, 0,
   getAmbientBrightness
 };
 
-Param airHumidity{
+Param airHumidity {
   "Air Humidity", "AH",
-  20, 70,
+  AH_MIN, AH_MAX,
   "AIR IS TOO DRY", "AIR IS TOO MOIST",
   false, 1,
   getAirHumidity
 };
 
-Param airTemperature{
+Param airTemperature {
   "Air Temperature", "AT",
-  22, 40,
+  AT_MIN, AT_MAX,
   "AIR IS TOO COLD", "AIR IS TOO HOT",
   false,
   1,
@@ -56,7 +56,7 @@ Param params[] = {
 const int numParams = sizeof(params) / sizeof(Param);
 
 bool isLightOn = false;
-const int minBrighness = 50;
+const int minBrighness = AB_MIN;
 
 
 /* SETUP */

@@ -1,3 +1,13 @@
+// PARAM CONSTRAINTS
+#define SH_MIN 220
+#define SH_MAX 600
+#define AB_MIN 50
+#define AB_MAX 100
+#define AH_MIN 20
+#define AH_MAX 70
+#define AT_MIN 22
+#define AT_MAX 40
+
 // DHT
 #define DHT_TYPE DHT22
 

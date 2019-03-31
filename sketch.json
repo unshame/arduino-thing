@@ -1,1 +1,1 @@
-{"cpu":{"fqbn":"arduino:avr:uno","name":"Arduino/Genuino Uno","port":""},"secrets":[],"included_libs":[{"name":"DHT sensor library","version":"1.3.4"},{"name":"LiquidCrystal I2C","version":"1.1.2"},{"name":"LiquidCrystal","version":"1.0.7"}]}
+{"cpu":{"fqbn":"arduino:avr:uno","name":"Arduino/Genuino Uno","port":""},"included_libs":[{"name":"DHT sensor library","version":"1.3.4"},{"name":"LiquidCrystal I2C","version":"1.1.2"},{"name":"LiquidCrystal","version":"1.0.7"}],"secrets":[]}
