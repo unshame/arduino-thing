@@ -1,6 +1,10 @@
 #include <Arduino.h>
+
+// DHT sensor library - Version: 1.3.4
 #include <DHT.h>
 #include <DHT_U.h>
+
+// LiquidCrystal - Version: 1.0.7
 #include <LiquidCrystal.h>
 
 #include "plantMonitor.h"
