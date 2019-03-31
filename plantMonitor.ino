@@ -41,8 +41,7 @@ Param airTemperature {
   "Air Temperature", "AT",
   AT_MIN, AT_MAX,
   "AIR IS TOO COLD", "AIR IS TOO HOT",
-  false,
-  1,
+  false, 1,
   getAirTemperature
 };
 
