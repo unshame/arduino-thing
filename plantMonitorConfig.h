@@ -1,26 +1,53 @@
+/* 
+ * Plant Monitor
+ * Модуль предназначен для мониторинга параметров воздуха, почвы и освещения.
+ * Облегчает уход за домашними растениями, оповещая пользователя о неприемлемых для растений условиях существования.
+ *
+ * Заголовочный файл конфигурации.
+ *
+ * Авторы: Шибаев О.Е и Ефремов Д.Е.
+ * Дата последнего изменения указана в репозитории проекта: https://github.com/unshame/arduino-thing/blob/master/platMonitorConfig.h  
+ * Информация о лицензировании находится в файле LICENSE.txt 
+ */
+
 // PARAM CONSTRAINTS
+// Миммальные и максимальные значения параметров
+
+// Влажность почвы
 #define SH_MIN 220
 #define SH_MAX 600
+
+// Яркость освещения
 #define AB_MIN 50
 #define AB_MAX 100
+
+// Влажность воздуха
 #define AH_MIN 20
 #define AH_MAX 70
+
+// Температура воздуха
 #define AT_MIN 22
 #define AT_MAX 40
 
 // DHT
-#define DHT_TYPE DHT22
+#define DHT_TYPE DHT22 // Тип датчика плажности и температуры воздуха
 
 // INPUT PINS
-#define PIN_A_PHOTOSENSOR 1
-#define PIN_A_SOILHUMIDITY 0
-#define PIN_D_DHT 7
+// Номера входов/выходов (пинов), использующихся в режиме входа
+// A - аналоговый сигнал, D - цифровой сигнал
+#define PIN_A_PHOTOSENSOR 1  // Пин датчика яркости освещения
+#define PIN_A_SOILHUMIDITY 0 // Пин датчика влажности почвы
+#define PIN_D_DHT 7          // Пин датчика температуры и влажности воды
+#define PIN_A_UNUSED 4       // Неиспользуемый пин для инициализации генератора случайных чисел
 
 // OUTPUT PINS
-#define PIN_D_BUZZER 6
-#define PIN_D_LIGHT 13
+// Номера входов/выходов (пинов), использующихся в режиме выхода
+// A - аналоговый сигнал, D - цифровой сигнал
+#define PIN_D_BUZZER 6 // Пин спикера (пьезоизлучателя)
+#define PIN_D_LIGHT 13 // Пин дополнительного освещения (диода)
 
 // LCD DISPLAY PINS
+// Номера входов/выходов (пинов) цифрового сигнала, использующихся LCD экраном
 #define PIN_LCD_1 12
 #define PIN_LCD_2 11
 #define PIN_LCD_3 5
@@ -29,11 +56,13 @@
 #define PIN_LCD_6 2
 
 // SYSTEM CONFIG
-#define PORT 9600
-#define INIT_DELAY 2000
-#define UPDATE_INTERVAL 1000
+// Системная конфигурация программы
+#define DATA_RATE 9600       // Скорость потока данных в битах в секунду
+#define INIT_DELAY 2000      // Задержка перед началом проверки значений датчиков
+#define UPDATE_INTERVAL 1000 // Интервал проверки значений датчиков
 
 // DISPLAY
-#define DISPLAY_WIDTH 16
-#define DISPLAY_HEIGHT 2
-#define DISPLAY_GREETING "HELLO!"
+// Конфигурация дисплея
+#define DISPLAY_WIDTH 16          // Ширина дисплея в символах
+#define DISPLAY_HEIGHT 2          // Высота дисплея в строках - на данный момент поддерживается только 2 строки
+#define DISPLAY_GREETING "HELLO!" // Сообщение, выводимое при включении устройства
