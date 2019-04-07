@@ -28,7 +28,6 @@
 // Библиотека датчика воздуха
 // DHT sensor library - Version: 1.3.4
 #include <DHT.h>
-#include <DHT_U.h>
 
 // Библиотека LCD дисплея
 // LiquidCrystal - Version: 1.0.7
